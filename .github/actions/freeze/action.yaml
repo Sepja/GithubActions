@@ -6,9 +6,10 @@ inputs:
     required: true
     default: 'World'
   valid:  # id of input
-    description: 'Input'
+    description: 'Input boolean'
+    type: boolean
     required: true
-    default: 1
+    default: false
 outputs:
   time: # id of output
     description: 'The time we greeted you'

@@ -27,15 +27,15 @@ jobs:
         uses: ./.github/actions/freeze
         with:
           who-to-greet: 'Mona the Octocat'
-          valid: '0'
+          valid: false
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
 
       - name: Acts if valid
-        if: ${{ steps.hello.outputs.isValid }} == '1'
+        if: ${{ steps.hello.outputs.isValid }}
         run: echo "Valid"
 
       - name: Acts if invalid
-        if: ${{ steps.hello.outputs.isValid }} == '0'
+        if: ${{ !steps.hello.outputs.isValid }}
         run: echo "Invalid"
