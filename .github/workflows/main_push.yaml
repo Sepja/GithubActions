@@ -37,5 +37,5 @@ jobs:
         run: echo "Valid"
 
       - name: Acts if invalid
-        if: !${{ steps.hello.outputs.isValid }}
+        if: ${{ !steps.hello.outputs.isValid }}
         run: echo "Valid"
