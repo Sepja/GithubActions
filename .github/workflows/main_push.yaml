@@ -27,7 +27,7 @@ jobs:
         uses: ./.github/actions/freeze
         with:
           who-to-greet: 'Mona the Octocat'
-          valid: 1
+          valid: 0
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
