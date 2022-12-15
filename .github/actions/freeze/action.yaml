@@ -5,9 +5,15 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  valid:  # id of input
+    description: 'Input'
+    required: true
+    default: 1
 outputs:
   time: # id of output
     description: 'The time we greeted you'
+  isValid: # id of output
+    description: 'Returns a boolean as number 0 or 1'
 runs:
   using: 'node16'
   main: 'index.js'
