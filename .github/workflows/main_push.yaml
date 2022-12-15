@@ -33,9 +33,9 @@ jobs:
         run: echo "The time was ${{ steps.hello.outputs.time }}"
 
       - name: Acts if valid
-        if: ${{ steps.hello.outputs.isValid }}
+        if: ${{ steps.hello.outputs.isValid }} == '1'
         run: echo "Valid"
 
       - name: Acts if invalid
-        if: ${{ !steps.hello.outputs.isValid }}
+        if: ${{ steps.hello.outputs.isValid }} == '0'
         run: echo "Valid"
